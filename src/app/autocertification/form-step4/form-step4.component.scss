@@ -1,0 +1,70 @@
+.form-step-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #3f51b5;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .half-width {
+    flex: 1;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between breadcrumb items */
+    font-size: 14px;
+    color: #6c757d; /* Default breadcrumb text color */
+  }
+  
+  .breadcrumb a {
+    text-decoration: none;
+    color: #007bff; /* Primary breadcrumb link color */
+    font-weight: 500; /* Bold for visibility */
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  .breadcrumb a.active {
+    color: #495057; /* Active breadcrumb color */
+    font-weight: bold; /* Bold for current page */
+    pointer-events: none; /* Disable clicking on the active link */
+  }
+  
+
+  

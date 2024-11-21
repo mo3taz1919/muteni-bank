@@ -1,0 +1,52 @@
+
+
+
+<div class="form-step-container">
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a routerLink="/">{{ 'Step3.BREADCRUMB_HOME' | translate }}</a> >
+    <a routerLink="/form-step1">{{ 'Step3.BREADCRUMB_STEP1' | translate }}</a> >
+    <a routerLink="/form-step2">{{ 'Step3.BREADCRUMB_STEP2' | translate }}</a> >
+    <a routerLink="/form-step3">{{ 'Step3.BREADCRUMB_STEP3' | translate }}</a>
+  </nav>
+
+  <!-- Header -->
+  <div class="summary-header">
+    <button mat-button color="primary" class="back-button" (click)="previousStep()">
+      <mat-icon>arrow_circle_left</mat-icon>
+    </button>
+    <h2>{{ 'Step3.FORM_TITLE' | translate }}</h2>
+    <h3>{{ 'Step3.FORM_SUBTITLE' | translate }}</h3>
+  </div>
+
+  <!-- Progress Bar -->
+  <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+
+  <!-- Form -->
+  <form [formGroup]="form" (ngSubmit)="nextStep()">
+    <div class="question">
+      <label>{{ 'Step3.QUESTION_US_RESIDENT' | translate }}</label>
+      <mat-button-toggle-group formControlName="usResident" class="toggle-group" appearance="legacy">
+        <mat-button-toggle value="true">{{ 'Step3.OPTION_YES' | translate }}</mat-button-toggle>
+        <mat-button-toggle value="false">{{ 'Step3.OPTION_NO' | translate }}</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+
+    <div class="question">
+      <label>{{ 'Step3.QUESTION_US_CITIZEN' | translate }}</label>
+      <mat-button-toggle-group formControlName="usCitizen" class="toggle-group" appearance="legacy">
+        <mat-button-toggle value="true">{{ 'Step3.OPTION_YES' | translate }}</mat-button-toggle>
+        <mat-button-toggle value="false">{{ 'Step3.OPTION_NO' | translate }}</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+
+    <p class="disclaimer">
+      <mat-icon>info</mat-icon>
+      {{ 'Step3.DISCLAIMER' | translate }}
+    </p>
+
+    <button mat-raised-button color="primary">
+      {{ 'Step3.BUTTON_CONTINUE' | translate }}
+    </button>
+  </form>
+</div>

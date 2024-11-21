@@ -1,0 +1,89 @@
+
+  .form-step-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #3f51b5;
+    margin-bottom: 5px;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  mat-progress-bar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .question {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .toggle-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .disclaimer {
+    display: flex;
+    align-items: flex-start;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  
+
+  
+  button {
+    align-self: flex-end;
+    margin-top: 20px;
+  }
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    font-size: 14px;
+    color: #6c757d; 
+  }
+  
+  .breadcrumb a {
+    text-decoration: none;
+    color: #007bff; 
+    font-weight: 500; 
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  .breadcrumb a.active {
+    color: #495057; 
+    font-weight: bold; 
+    pointer-events: none; 
+  }
+  
+  mat-divider {
+    height: 24px; 
+    margin: 0 8px; 
+    background-color: #e0e0e0; 
+  }
+  
