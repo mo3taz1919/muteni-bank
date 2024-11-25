@@ -7,12 +7,12 @@
   border-radius: 10px;
 }
 .valid-icon {
-  color: #28a745; /* Green tick color */
+  color: #28a745; 
   font-size: 20px;
 }
 .instructions {
-  font-size: 10px; /* Slightly smaller than the title */
-  color: #6c757d; /* Neutral gray for the instructions */
+  font-size: 10px; 
+  color: #6c757d;
   font-weight: bold;
 }
 .form-container {
@@ -24,9 +24,8 @@
 .form-column {
   flex: 1;
 }
-.titre-form{
-  margin:0 0 0;
-
+.titre-form {
+  margin: 0 0 0;
 }
 .separator {
   width: 1px;
@@ -34,28 +33,26 @@
   margin: 0 20px;
 }
 
-
 .wider-input {
-  width: 85%; /* Ajout d'une largeur plus importante */
-  margin: 0 auto; /* Centrage */
+  width: 85%; 
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 14px; /* Font size for the title */
+  font-size: 14px;
   font-weight: bold;
-  margin:0 0 0;
+  margin: 0 0 0;
 
-  color: #13aa9a; /* Green color for the title text */
-  text-transform: uppercase; /* Matches the text style in the reference */
+  color: #13aa9a; 
+  text-transform: uppercase; 
 }
 /* Header Styling */
 .summary-header {
   display: inline-flex;
   align-items: center;
-  gap: 10px; /* Space between the back button and title */
-  background: #f9f9f9; /* Light background for the header */
-  padding: 10px 20px; /* Padding inside the header */
-
+  gap: 10px; 
+  background: #f9f9f9; 
+  padding: 10px 20px; 
 }
 .button-container {
   display: flex;
@@ -67,17 +64,16 @@ h1 {
     font-size: 1rem;
     padding: 10px 30px;
     border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-
+    
     &.active-button {
-      background-color: #13aa9a; /* Couleur active (vert) */
-      color: #fff; /* Texte en blanc */
+      background-color: #13aa9a; 
+      color: #fff; 
       cursor: pointer;
     }
 
     &.disabled-button {
-      background-color: #cccccc; /* Couleur désactivée (gris) */
-      color: #666666; /* Texte grisé */
+      background-color: #cccccc; 
+      color: #666666; 
       cursor: not-allowed;
     }
   }
@@ -86,15 +82,14 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #13aa9a; /* Green color for the icon */
-  font-size: 24px; /* Icon size */
+  color: #13aa9a; 
+  font-size: 24px; 
   padding: 0;
   margin: 0;
   border: none;
   background: none;
   cursor: pointer;
 }
-
 
 h3 {
   font-size: 1.2rem;

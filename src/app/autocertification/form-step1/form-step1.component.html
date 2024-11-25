@@ -1,11 +1,10 @@
 <div class="form-step1-container">
-   <div class="p-5 bg-light mb-4">
-
+  <div class="p-5 bg-light mb-4">
     <nav class="d-flex">
       <h6 class="mb-0">
-        <a routerLink="/" class="text-reset">Profil</a>
+        <a routerLink="/" class="text-reset">{{"Breadcrumb.PROFILE" | translate}}</a>
         <span> > </span>
-        <a class="text-reset">{{'Step 1.FORM_TITLE' | translate }}</a>
+        <a class="text-reset">{{ "Breadcrumb.DECEASED_INFO" | translate }}</a>
       </h6>
     </nav>
   </div>
@@ -14,78 +13,139 @@
       <i class="bi bi-arrow-left-circle-fill"></i>
     </button>
     <div>
-      <h1>{{'Step 1.FORM_TITLE' | translate }}</h1>
-      <p class="titre-form">{{'Step 1.DECEASED_INFO' | translate }}</p>
+      <h1>{{ "Step 1.FORM_TITLE" | translate }}</h1>
+      <p class="titre-form">{{ "Step 1.DECEASED_INFO" | translate }}</p>
     </div>
   </div>
 
   <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
-
-  <h2>{{'Step 1.DECEASED_INFO2' | translate }}</h2>
-  <p class="instructions">{{'Step 1.DECEASED_INFO3' | translate }}</p>
+  <br />
+  <h2>{{ "Step 1.DECEASED_INFO2" | translate }}</h2>
+  <p class="instructions">{{ "Step 1.DECEASED_INFO3" | translate }}</p>
 
   <form [formGroup]="form" (ngSubmit)="nextStep()" class="form-layout">
     <div class="row mb-3">
       <div class="col-md-6">
         <mat-form-field appearance="outline" class="wider-input">
-          <mat-label>{{'Step 1.FORM_LABEL_NAME' | translate }}</mat-label>
-          <input matInput formControlName="lastName" placeholder="Nom du défunt" required />
-          <mat-icon matSuffix *ngIf="form.get('lastName')?.valid" class="valid-icon">
+          <mat-label>{{ "Step 1.FORM_LABEL_NAME" | translate }}</mat-label>
+          <input
+            matInput
+            formControlName="lastName"
+            placeholder="Nom du défunt"
+            required
+          />
+          <mat-icon
+            matSuffix
+            *ngIf="form.get('lastName')?.valid"
+            class="valid-icon"
+          >
             check_circle
           </mat-icon>
-          <mat-error *ngIf="form.get('lastName')?.hasError('required')">{{'Step 1.FORM_ERROR_NAME_REQUIRED' | translate }}</mat-error>
+          <mat-error *ngIf="form.get('lastName')?.hasError('required')">{{
+            "Step 1.FORM_ERROR_NAME_REQUIRED" | translate
+          }}</mat-error>
         </mat-form-field>
       </div>
 
       <div class="col-md-6">
         <mat-form-field appearance="outline" class="wider-input">
-          <mat-label>{{'Step 1.FORM_LABEL_FIRST_NAME' | translate }}</mat-label>
-          <input matInput formControlName="firstName" placeholder="Prénom du défunt" required />
-          <mat-icon matSuffix *ngIf="form.get('firstName')?.valid" class="valid-icon">
+          <mat-label>{{
+            "Step 1.FORM_LABEL_FIRST_NAME" | translate
+          }}</mat-label>
+          <input
+            matInput
+            formControlName="firstName"
+            placeholder="Prénom du défunt"
+            required
+          />
+          <mat-icon
+            matSuffix
+            *ngIf="form.get('firstName')?.valid"
+            class="valid-icon"
+          >
             check_circle
           </mat-icon>
-          <mat-error *ngIf="form.get('firstName')?.hasError('required')">{{'Step 1.FORM_ERROR_FIRST_NAME_REQUIRED' | translate }}</mat-error>
+          <mat-error *ngIf="form.get('firstName')?.hasError('required')">{{
+            "Step 1.FORM_ERROR_FIRST_NAME_REQUIRED" | translate
+          }}</mat-error>
         </mat-form-field>
       </div>
     </div>
 
     <div class="row mb-3">
-
       <div class="col-md-6">
         <mat-form-field appearance="outline" class="wider-input">
-          <mat-label>{{'Step 1.FORM_LABEL_BIRTH_DATE' | translate }}</mat-label>
-          <input matInput [matDatepicker]="picker" formControlName="birthDate" [max]="today" placeholder="{{'Step 1.FORM_PLACEHOLDER_BIRTH_DATE' | translate }}"
-            required />
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-label>{{
+            "Step 1.FORM_LABEL_BIRTH_DATE" | translate
+          }}</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            formControlName="birthDate"
+            [max]="today"
+            placeholder="{{ 'Step 1.FORM_PLACEHOLDER_BIRTH_DATE' | translate }}"
+            required
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
-          <mat-icon matSuffix *ngIf="form.get('birthDate')?.valid" class="valid-icon">
+          <mat-icon
+            matSuffix
+            *ngIf="form.get('birthDate')?.valid"
+            class="valid-icon"
+          >
             check_circle
           </mat-icon>
-          <mat-error *ngIf="form.get('birthDate')?.hasError('required')">{{'Step 1.FORM_ERROR_BIRTH_DATE_REQUIRED' | translate }}</mat-error>
+          <mat-error *ngIf="form.get('birthDate')?.hasError('required')">{{
+            "Step 1.FORM_ERROR_BIRTH_DATE_REQUIRED" | translate
+          }}</mat-error>
         </mat-form-field>
       </div>
     </div>
 
     <div class="row mb-4">
       <div class="col-md-12">
-
         <mat-form-field appearance="outline" class="wider-input">
-
-          <mat-label>{{'Step 1.FORM_PLACEHOLDER_CLIENT_NUMBER' | translate }}</mat-label>
-          <input matInput formControlName="clientNumber" placeholder="Numéro client" required />
-          <mat-icon matSuffix *ngIf="form.get('clientNumber')?.valid" class="valid-icon">
+          <mat-label>{{
+            "Step 1.FORM_PLACEHOLDER_CLIENT_NUMBER" | translate
+          }}</mat-label>
+          <input
+            matInput
+            formControlName="clientNumber"
+            placeholder="Numéro client"
+            required
+          />
+          <mat-icon
+            matSuffix
+            *ngIf="form.get('clientNumber')?.valid"
+            class="valid-icon"
+          >
             check_circle
           </mat-icon>
-          <mat-error *ngIf="form.get('clientNumber')?.hasError('required')">{{'Step 1.FORM_ERROR_CLIENT_NUMBER_REQUIRED' | translate }}</mat-error>
-          <mat-hint>{{'Step 1.FORM_HINT_CLIENT_NUMBER' | translate }}</mat-hint>
+          <mat-error *ngIf="form.get('clientNumber')?.hasError('required')">{{
+            "Step 1.FORM_ERROR_CLIENT_NUMBER_REQUIRED" | translate
+          }}</mat-error>
+          <mat-hint>{{
+            "Step 1.FORM_HINT_CLIENT_NUMBER" | translate
+          }}</mat-hint>
         </mat-form-field>
       </div>
     </div>
 
     <div class="button-container text-end">
-      <button mat-raised-button type="submit" [disabled]="form.invalid"
-        [ngClass]="{ 'active-button': !form.invalid, 'disabled-button': form.invalid }">
-        {{'Step 1.FORM_BUTTON_CONTINUE' | translate }}
+      <button
+        mat-raised-button
+        type="submit"
+        [disabled]="form.invalid"
+        [ngClass]="{
+          'active-button': !form.invalid,
+          'disabled-button': form.invalid
+        }"
+      >
+        {{ "Step 1.FORM_BUTTON_CONTINUE" | translate }}
       </button>
     </div>
   </form>
+</div>

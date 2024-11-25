@@ -1,0 +1,115 @@
+{
+  "Home":{
+  "INTRO_TITLE": "But du formulaire FATCA / AEOI",
+  "FORM_PURPOSE": "À quoi sert ce formulaire ?",
+  "FORM_PURPOSE_DESC_1": "Ce formulaire est obligatoire. Il sert à répondre aux exigences des réglementations fiscales américaines (FATCA), de l'Organisation de Coopération et de Développement Économiques (AEOI) et de l'Union Européenne avec lesquelles la France a signé des accords.",
+  "FORM_PURPOSE_DESC_2": "Dans le cadre de la réglementation FATCA, il est nécessaire de déterminer si vous êtes citoyen(ne) ou résident(e) américain(e).",
+  "FORM_PURPOSE_DESC_3": "Dans le cadre de la réglementation AEOI et UE, il est nécessaire d’identifier la liste des pays dans lesquels vous êtes considéré(e) comme résident(e) à des fins fiscales.",
+  "STEPS_TO_FOLLOW": "Les étapes à suivre",
+  "STEP_1": "Compléter le formulaire en ligne",
+  "STEP_2": "Vérifier les données saisies",
+  "STEP_3": "Signer électroniquement",
+  "START": "Commencer",
+  "DISCLAIMER": "Ce formulaire ne peut ni ne doit prodiguer à ses clients aucun conseil relatif à la déclaration de leur statut FATCA ou AEOI. Pour toute demande d'information complémentaire relative à des éléments FATCA ou AEOI, vous devez solliciter les services d'un fiscaliste."
+},
+"Breadcrumb" :{
+  "PROFILE": "Profil",
+  "DECEASED_INFO": "Informations du défunt",
+  "YOUR_INFO": "Vos informations",
+  "TAX_RESIDENCE": "Votre résidence fiscale",
+  "US_PROFILE": "Votre Profil US person",
+  "FISCAL_NUMBER": "Votre numero d'identification fiscale",
+  "SUMMARY": "Recaputulatife"
+
+},
+ "Step 1":{
+  "FORM_TITLE": "Formulaire FATCA / AEOI",
+  "DECEASED_INFO": "Informations du défunt",
+  "FORM_LABEL_NAME": "Nom",
+  "FORM_LABEL_FIRST_NAME": "Prénom",
+  "FORM_LABEL_BIRTH_DATE": "Date de naissance",
+  "FORM_LABEL_CLIENT_NUMBER": "Numéro client",
+  "FORM_PLACEHOLDER_NAME": "Nom du défunt",
+  "FORM_PLACEHOLDER_FIRST_NAME": "Prénom du défunt",
+  "FORM_PLACEHOLDER_BIRTH_DATE": "JJ/MM/AAAA",
+  "DECEASED_INFO2": "Renseigner les informations du défunt",
+  "DECEASED_INFO3": "Tous les champs sont obligatoires sauf ceux indiqués comme étant facultatifs",
+  "FORM_PLACEHOLDER_CLIENT_NUMBER": "Numéro client",
+  "FORM_HINT_CLIENT_NUMBER": "Veuillez noter que le défunt peut avoir plusieurs numéros client MUTENI. C'est pourquoi le numéro affiché ici peut être différent de celui présent sur le formulaire reçu par courrier.",
+  "FORM_ERROR_NAME_REQUIRED": "Nom est obligatoire",
+  "FORM_ERROR_FIRST_NAME_REQUIRED": "Prénom est obligatoire",
+  "FORM_ERROR_BIRTH_DATE_REQUIRED": "Date de naissance est obligatoire",
+  "FORM_ERROR_CLIENT_NUMBER_REQUIRED": "Numéro client est obligatoire",
+  "FORM_BUTTON_CONTINUE": "Continuer"
+  },
+  "Step2": {
+    "FORM_TITLE": "FORMULAIRE FATCA / AEOI",
+    "FORM_SUBTITLE": "Vos informations",
+    "INSTRUCTIONS": "Tous les champs sont obligatoires sauf ceux indiqués comme étant facultatifs.",
+    "IDENTITY_SECTION_TITLE": "Votre identité",
+    "LABEL_LAST_NAME": "Nom",
+    "PLACEHOLDER_LAST_NAME": "Entrez votre nom",
+    "ERROR_LAST_NAME_REQUIRED": "Le nom est obligatoire.",
+    "LABEL_USAGE_NAME": "Nom d'usage (si différent)",
+    "PLACEHOLDER_USAGE_NAME": "Entrez votre nom d'usage",
+    "LABEL_FIRST_NAME": "Prénom",
+    "PLACEHOLDER_FIRST_NAME": "Entrez votre prénom",
+    "ERROR_FIRST_NAME_REQUIRED": "Le prénom est obligatoire.",
+    "LABEL_BIRTH_DATE": "Date de naissance",
+    "PLACEHOLDER_BIRTH_DATE": "JJ/MM/AAAA",
+    "ERROR_BIRTH_DATE_REQUIRED": "La date de naissance est obligatoire.",
+    "LABEL_BIRTH_CITY": "Ville de naissance",
+    "PLACEHOLDER_BIRTH_CITY": "Entrez votre ville de naissance",
+    "LABEL_BIRTH_COUNTRY": "Pays de naissance",
+    "DOMICILE_SECTION_TITLE": "Votre domicile",
+    "LABEL_MAIN_ADDRESS": "Adresse de la résidence principale",
+    "PLACEHOLDER_MAIN_ADDRESS": "Entrez votre adresse principale",
+    "ERROR_MAIN_ADDRESS_REQUIRED": "L'adresse principale est obligatoire.",
+    "LABEL_ADDRESS_COMPLEMENT": "Complément d'adresse (facultatif)",
+    "PLACEHOLDER_ADDRESS_COMPLEMENT": "Entrez un complément d'adresse",
+    "LABEL_POSTAL_CODE": "Code postal",
+    "PLACEHOLDER_POSTAL_CODE": "Entrez votre code postal",
+    "ERROR_POSTAL_CODE_REQUIRED": "Le code postal est obligatoire.",
+    "ERROR_POSTAL_CODE_PATTERN": "Le code postal doit contenir 5 chiffres.",
+    "LABEL_CITY": "Ville",
+    "PLACEHOLDER_CITY": "Entrez votre ville",
+    "ERROR_CITY_REQUIRED": "La ville est obligatoire.",
+    "LABEL_COUNTRY": "Pays",
+    "ERROR_COUNTRY_REQUIRED": "Le pays est obligatoire.",
+    "BUTTON_CONTINUE": "Continuer"
+  }, 
+   "Step3": {
+
+    "FORM_TITLE": "FORMULAIRE FATCA / AEOI",
+    "FORM_SUBTITLE": "Votre résidence fiscale",
+    "QUESTION_US_RESIDENT": "Etes-vous résident(e) fiscal(e) en France ?",
+    "OPTION_YES": "Oui",
+    "OPTION_NO": "Non",
+    "QUESTION_US_CITIZEN": "Etes-vous résident(e) fiscal(e)  d'au moins un autre pays autre que la France ?",
+    "BUTTON_CONTINUE": "Continuer"
+  },
+  "Step4": {
+
+    "FORM_TITLE": "FORMULAIRE FATCA / AEOI",
+    "FORM_SUBTITLE": "Votre profil US Person",
+    "QUESTION_US_RESIDENT": "Êtes-vous résident(e) des États-Unis à des fins fiscales ?",
+    "OPTION_YES": "Oui",
+    "OPTION_NO": "Non",
+    "QUESTION_US_CITIZEN": "Êtes-vous de nationalité américaine ?",
+    "DISCLAIMER": "Si vous n’avez pas la nationalité américaine et que vous n’êtes pas résident(e) américain(e) mais que vous êtes né(e) aux États-Unis, veuillez nous fournir un certificat de perte ou de non-obtention de la nationalité américaine (ou tout autre justificatif).",
+    "BUTTON_CONTINUE": "Continuer"
+  },
+
+  "Step5": {
+    "FORM_TITLE": "FORMULAIRE FATCA / AEOI",
+    "FORM_SUBTITLE": "Votre numéro d'identification fiscale (NIF)",
+    "INSTRUCTION": "Veuillez indiquer l'ensemble des pays autres que la France dans lesquels vous êtes considéré(e) comme résident(e) à des fins fiscales et précisez votre Numéro d'Identification Fiscale (NIF) pour chacun de ces pays.",
+    "LABEL_COUNTRY": "Pays de résidence fiscale",
+    "PLACEHOLDER_COUNTRY": "Entrez un pays",
+    "ERROR_COUNTRY_REQUIRED": "Le pays de résidence fiscale est requis.",
+    "LABEL_NIF": "NIF",
+    "PLACEHOLDER_NIF": "Non demandé",
+    "BUTTON_CONTINUE": "Continuer"
+  }
+  
+}

@@ -1,0 +1,54 @@
+<div class="form-step-container">
+  <!-- Breadcrumb -->
+  <div class="p-5 bg-light mb-4">
+    <nav class="d-flex">
+      <h6 class="mb-0">
+        <a routerLink="/">{{ "Breadcrumb.PROFILE" | translate }}</a> >
+        <a routerLink="/form-step1">{{"Breadcrumb.DECEASED_INFO" | translate }}</a>>
+        <a routerLink="/form-step2">{{"Breadcrumb.YOUR_INFO" | translate }}</a>>
+        <a routerLink="/form-step3">{{"Breadcrumb.TAX_RESIDENCE" | translate}}</a>>
+        <a routerLink="/form-step4">{{"Breadcrumb.US_PROFILE" | translate}}</a>>
+        <a class="text-reset">{{ "Breadcrumb.FISCAL_NUMBER" | translate }}</a>
+      </h6>
+    </nav>
+  </div>
+
+  <div class="summary-header d-flex align-items-center">
+    <button class="btn back-button" (click)="previousStep()">
+      <i class="bi bi-arrow-left-circle-fill"></i>
+    </button>
+    <div>
+      <h1>{{ "Step5.FORM_TITLE" | translate }}</h1>
+      <p class="titre-form">{{ "Step5.FORM_SUBTITLE" | translate }}</p>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <mat-progress-bar mode="determinate" value="85"></mat-progress-bar>
+
+  <!-- Instructions -->
+  <p class="instruction">{{ "Step5.INSTRUCTION" | translate }}</p>
+
+  <!-- Form -->
+  <form [formGroup]="form" (ngSubmit)="nextStep()">
+    <div class="row">
+      <mat-form-field class="wider-input">
+        <mat-label>{{ "Step5.LABEL_COUNTRY" | translate }}</mat-label>
+        <mat-select formControlName="country">
+          <mat-option *ngFor="let country of countries" [value]="country.isoCode">
+            {{ country.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="half-width">
+        <mat-label>{{ "Step5.LABEL_NIF" | translate }}</mat-label>
+        <input matInput formControlName="nif" placeholder="{{ 'Step5.PLACEHOLDER_NIF' | translate }}" readonly />
+      </mat-form-field>
+    </div>
+
+    <div class="button-container text-center">
+      <button>{{ "Step5.BUTTON_CONTINUE" | translate }}</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,90 @@
+
+
+  
+  <div class="summary-container">
+    <div class="p-5 bg-light mb-4">
+
+      <nav class="d-flex">
+        <h6 class="mb-0">    
+          <a routerLink="/">{{ 'Breadcrumb.PROFILE' | translate }}</a> >
+          <a routerLink="/form-step1">{{ 'Breadcrumb.DECEASED_INFO' | translate }}</a> >
+          <a routerLink="/form-step2">{{ 'Breadcrumb.YOUR_INFO' | translate }}</a> >
+          <a routerLink="/form-step3">{{ 'Breadcrumb.TAX_RESIDENCE' | translate }}</a>
+          <a routerLink="/form-step4">{{ 'Breadcrumb.US_PROFILE' | translate }}</a>
+          <a routerLink="/form-step5">{{ 'Breadcrumb.FISCAL_NUMBER' | translate }}</a>
+
+          <a class="text-reset">{{ 'Breadcrumb.SUMMARY' | translate }}</a>
+    </h6>
+  </nav>
+  </div>      <div class="summary-header">
+
+      <button mat-button color="primary" class="back-button" (click)="previousStep()">
+        <mat-icon>arrow_circle_left</mat-icon> 
+      </button>
+    <h1>FORMULAIRE FATCA / AEOI</h1>
+    <h2>Récapitulatif</h2>
+    </div>
+    <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+
+    <p>
+      Avant de valider, veuillez vérifier que l’ensemble des informations saisies correspondent à votre situation.
+    </p>
+
+    <!-- Information du défunt -->
+    <section class="summary-section">
+      <h3>Informations du défunt</h3>
+      <div class="summary-details">
+        <div><strong>Nom:</strong> {{ deceasedInfo.fullName }}</div>
+        <div><strong>Prénom:</strong> {{ deceasedInfo.firstName }}</div>
+        <div><strong>Date de naissance:</strong> {{ deceasedInfo.birthDate }}</div>
+        <div><strong>Numéro client:</strong> {{ deceasedInfo.clientNumber }}</div>
+      </div>
+      <button mat-raised-button color="primary" (click)="editSection('deceased')">Modifier</button>
+    </section>
+  
+    <!-- Vos informations -->
+    <section class="summary-section">
+      <h3>Vos informations</h3>
+      <div class="summary-details">
+        <div><strong>Nom:</strong> {{ personalInfo.lastName }}</div>
+        <div><strong>Nom d’usage:</strong> {{ personalInfo.usageName }}</div>
+        <div><strong>Prénom:</strong> {{ personalInfo.firstName }}</div>
+        <div><strong>Date de naissance:</strong> {{ personalInfo.birthDate }}</div>
+        <div><strong>Pays de naissance:</strong> {{ personalInfo.birthCountry }}</div>
+        <div><strong>Ville de naissance:</strong> {{ personalInfo.birthCity }}</div>
+        <div><strong>Adresse de résidence principale:</strong> {{ personalInfo.address }}</div>
+        <div><strong>Complément d’adresse:</strong> {{ personalInfo.addressAdditional }}</div>
+        <div><strong>Code postal:</strong> {{ personalInfo.postalCode }}</div>
+        <div><strong>Ville:</strong> {{ personalInfo.city }}</div>
+        <div><strong>Pays:</strong> {{ personalInfo.country }}</div>
+      </div>
+      <button mat-raised-button color="primary" (click)="editSection('personal')">Modifier</button>
+    </section>
+  
+    <!-- Résidence fiscale -->
+<!--     <section class="summary-section">
+      <h3>Vos informations</h3>
+      <div class="summary-details">
+        <p><strong>{{ 'Step3.QUESTION_US_RESIDENT' | translate }}</strong> {{ taxResidenceInfo.usResident }}</p>
+        <p><strong>{{ 'Step3.QUESTION_US_CITIZEN' | translate }}</strong> {{ taxResidenceInfo.usCitizen }}</p>
+
+      </div>
+      <button mat-raised-button color="primary" (click)="editSection('taxResidence')">Modifier</button>
+    </section> -->
+
+    
+    <section class="summary-section">
+      <h3>Informations fiscales</h3>
+      <div class="summary-details">
+        <p><strong>Pays de résidence fiscale :</strong> {{ taxResidenceInfo.country }}</p>
+        <p><strong>NIF :</strong> {{ taxResidenceInfo.nif }}</p>
+      </div>
+      <button mat-raised-button color="primary" (click)="editSection('taxIdentification')">Modifier</button>
+    </section>
+
+    <!-- Validation -->
+    <div class="validate-container">
+      <button mat-raised-button color="accent" (click)="validate()">Valider</button>
+    </div>
+  </div>
+  

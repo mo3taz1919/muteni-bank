@@ -1,37 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-form-step4',
   templateUrl: './form-step4.component.html',
-  styleUrls: ['./form-step4.component.scss']
+  styleUrls: ['./form-step4.component.scss'],
 })
 export class FormStep4Component implements OnInit {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router,    private dataService: DataService
-  ) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.form = this.fb.group({
-      country: ['', Validators.required],
-      nif: ['Non demandé'] // Default value as per the image
+      usResident: [false, Validators.required],
+      usCitizen: [false, Validators.required],
     });
   }
 
   ngOnInit(): void {
-    this.form.patchValue(this.dataService.taxIdentificationInfo);
+    const storedData = JSON.parse(localStorage.getItem('step4Data') || '{}');
+    if (storedData) {
+      this.form.patchValue(storedData);
+    }
+    console.log('Initial Residence info in form:', this.form.value);
+  }
 
+  nextStep(): void {
+    if (this.form.valid) {
+      localStorage.setItem('step4Data', JSON.stringify(this.form.value));
+      console.log('Step 4 Data Saved:', this.form.value);
+      this.router.navigate(['/form-step5']);
+    } else {
+      console.error('Step 4 Form is invalid:', this.form.value);
+    }
+  }
+  onToggleChange(controlName: string, value: boolean): void {
+    this.form.get(controlName)?.setValue(value);
   }
   previousStep(): void {
     this.router.navigate(['/form-step3']);
   }
-  nextStep(): void {
-    if (this.form.valid) {
-      this.dataService.setTaxIdentificationInfo(this.form.value);
-      console.log("Tax Identification Info saved:", this.form.value);
-      this.router.navigate(['/summary']);
-    }
-  }
-  
 }

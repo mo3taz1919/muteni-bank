@@ -6,12 +6,13 @@
   border: 1px solid #e0e0e0;
   border-radius: 10px;
 }
+
 h1 {
   font-size: 14px; 
   font-weight: bold;
-  margin: 0 0 0;
+  margin:0 0 0;
 
-  color: #13aa9a; 
+  color: #13aa9a;
   text-transform: uppercase; 
 }
 .back-button {
@@ -26,10 +27,9 @@ h1 {
   background: none;
   cursor: pointer;
 }
-
 .button-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 20px;
 
   button {
@@ -46,38 +46,40 @@ h1 {
 .summary-header {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: #f9f9f9;
-  padding: 10px 20px;
+  gap: 10px; 
+  background: #f9f9f9; 
+  padding: 10px 20px; 
+
 }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+  
+  p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .half-width {
+    flex: 1;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
 
-.question {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.toggle-group {
-  display: flex;
-  gap: 10px;
-}
-
-.disclaimer {
-  display: flex;
-  align-items: flex-start;
-  color: #666;
-  font-size: 0.9rem;
-  margin-top: 20px;
-  line-height: 1.5;
-  overflow: unset;
-}
-
-.disclaimer .mat-icon {
-  overflow: unset;
-}
+  

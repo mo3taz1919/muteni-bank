@@ -1,0 +1,95 @@
+.summary-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #13AA9A; /* Dark green for title */
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.summary-section {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.summary-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #006400; /* Section headers in dark green */
+}
+
+.summary-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  font-size: 0.9rem;
+}
+
+.summary-details div {
+  margin-bottom: 8px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+button[mat-raised-button] {
+  text-transform: none; /* Prevent uppercase text */
+  font-size: 0.9rem;
+}
+
+.validate-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.validate-container button {
+  width: 150px;
+  font-size: 1rem;
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between breadcrumb items */
+  font-size: 14px;
+  color: #6c757d; /* Default breadcrumb text color */
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #007bff; /* Primary breadcrumb link color */
+  font-weight: 500; /* Bold for visibility */
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb a.active {
+  color: #495057; /* Active breadcrumb color */
+  font-weight: bold; /* Bold for current page */
+  pointer-events: none; /* Disable clicking on the active link */
+}

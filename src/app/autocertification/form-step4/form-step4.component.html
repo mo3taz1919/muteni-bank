@@ -1,59 +1,63 @@
+<div class="form-step-container">
+  <!-- Breadcrumb -->
+  <div class="p-5 bg-light mb-4">
 
+    <nav class="d-flex">
+      <h6 class="mb-0">
+        <a routerLink="/">{{ 'Breadcrumb.PROFILE' | translate }}</a> >
+        <a routerLink="/form-step1">{{ 'Breadcrumb.DECEASED_INFO' | translate }}</a> >
+        <a routerLink="/form-step2">{{ 'Breadcrumb.YOUR_INFO' | translate }}</a> >
+        <a routerLink="/form-step3">{{ 'Breadcrumb.TAX_RESIDENCE' | translate }}</a> >
 
-  <div class="form-step-container">
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb">
-      <a routerLink="/">{{ 'Step4.BREADCRUMB_HOME' | translate }}</a> >
-      <a routerLink="/form-step1">{{ 'Step4.BREADCRUMB_STEP1' | translate }}</a> >
-      <a routerLink="/form-step2">{{ 'Step4.BREADCRUMB_STEP2' | translate }}</a> >
-      <a routerLink="/form-step3">{{ 'Step4.BREADCRUMB_STEP3' | translate }}</a> >
-      <a routerLink="/form-step4">{{ 'Step4.BREADCRUMB_STEP4' | translate }}</a>
+        <a class="text-reset">{{ 'Breadcrumb.US_PROFILE' | translate }}</a>
+
+      </h6>
     </nav>
-  
-    <!-- Header -->
-    <div class="summary-header">
-      <button mat-button color="primary" class="back-button" (click)="previousStep()">
-        <mat-icon>arrow_circle_left</mat-icon>
-      </button>
-      <h2>{{ 'Step4.FORM_TITLE' | translate }}</h2>
-      <h3>{{ 'Step4.FORM_SUBTITLE' | translate }}</h3>
-    </div>
-  
-    <!-- Progress Bar -->
-    <mat-progress-bar mode="determinate" value="85"></mat-progress-bar>
-  
-    <!-- Instructions -->
-    <p class="instruction">{{ 'Step4.INSTRUCTION' | translate }}</p>
-  
-    <!-- Form -->
-    <form [formGroup]="form" (ngSubmit)="nextStep()">
-      <div class="row">
-        <mat-form-field class="half-width">
-          <mat-label>{{ 'Step4.LABEL_COUNTRY' | translate }}</mat-label>
-          <input
-            matInput
-            formControlName="country"
-            placeholder="{{ 'Step4.PLACEHOLDER_COUNTRY' | translate }}"
-            required
-          />
-          <mat-error *ngIf="form.get('country')?.hasError('required')">
-            {{ 'Step4.ERROR_COUNTRY_REQUIRED' | translate }}
-          </mat-error>
-        </mat-form-field>
-  
-        <mat-form-field class="half-width">
-          <mat-label>{{ 'Step4.LABEL_NIF' | translate }}</mat-label>
-          <input
-            matInput
-            formControlName="nif"
-            placeholder="{{ 'Step4.PLACEHOLDER_NIF' | translate }}"
-            readonly
-          />
-        </mat-form-field>
-      </div>
-  
-      <!-- Continue Button -->
-      <button mat-raised-button color="primary">{{ 'Step4.BUTTON_CONTINUE' | translate }}</button>
-    </form>
   </div>
-  
+
+  <!-- Header -->
+
+  <div class="summary-header d-flex align-items-center">
+    <button class="btn back-button" (click)="previousStep()">
+      <i class="bi bi-arrow-left-circle-fill"></i>
+    </button>
+    <div>
+      <h1>{{ 'Step4.FORM_TITLE' | translate }}</h1>
+      <p class="titre-form">{{ 'Step4.FORM_SUBTITLE' | translate }}</p>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+
+  <!-- Form -->
+  <form [formGroup]="form" (ngSubmit)="nextStep()">
+    <div class="question">
+      <label>{{ 'Step4.QUESTION_US_RESIDENT' | translate }}</label>
+      <mat-slide-toggle formControlName="usResident" color="primary"
+        (change)="onToggleChange('usResident', $event.checked)">
+        {{ form.get('usResident')?.value ? ('Step4.OPTION_YES' | translate) : ('Step4.OPTION_NO' | translate) }}
+      </mat-slide-toggle>
+    </div>
+
+    <div class="question">
+      <label>{{ 'Step4.QUESTION_US_CITIZEN' | translate }}</label>
+      <mat-slide-toggle formControlName="usCitizen" color="primary"
+        (change)="onToggleChange('usCitizen', $event.checked)">
+        {{ form.get('usCitizen')?.value ? ('Step4.OPTION_YES' | translate) : ('Step4.OPTION_NO' | translate) }}
+      </mat-slide-toggle>
+    </div>
+
+    <p class="disclaimer">
+      <mat-icon>info</mat-icon>
+      {{ 'Step4.DISCLAIMER' | translate }}
+    </p>
+
+    <div class="button-container text-end">
+
+      <button>
+        {{ 'Step4.BUTTON_CONTINUE' | translate }}
+      </button>
+    </div>
+  </form>
+</div>

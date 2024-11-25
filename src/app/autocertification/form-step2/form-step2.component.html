@@ -3,11 +3,11 @@
   <div class="p-5 bg-light mb-4">
     <nav class="d-flex">
       <h6 class="mb-0">
-        <a href="/" class="text-reset">{{ 'Step2.BREADCRUMB_PROFILE' | translate }}</a>
+        <a href="/" class="text-reset">{{ "Breadcrumb.PROFILE" | translate}}</a>
         <span> > </span>
-        <a routerLink="/form-step1" class="text-reset">{{ 'Step2.BREADCRUMB_DECEASED_INFO' | translate }}</a>
+        <a routerLink="/form-step1" class="text-reset">{{ "Breadcrumb.DECEASED_INFO" | translate}}</a>
         <span> > </span>
-        <a class="text-reset">{{ 'Step2.BREADCRUMB_YOUR_INFO' | translate }}</a>
+        <a class="text-reset">{{ "Breadcrumb.YOUR_INFO" | translate }}</a>
       </h6>
     </nav>
   </div>
@@ -18,89 +18,67 @@
       <i class="bi bi-arrow-left-circle-fill"></i>
     </button>
     <div>
-      <h1>{{ 'Step2.FORM_TITLE' | translate }}</h1>
-      <p class="titre-form">{{ 'Step2.FORM_SUBTITLE' | translate }}</p>
+      <h1>{{ "Step2.FORM_TITLE" | translate }}</h1>
+      <p class="titre-form">{{ "Step2.FORM_SUBTITLE" | translate }}</p>
     </div>
   </div>
 
   <!-- Progress Bar -->
-  <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+  <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
 
   <!-- Instructions -->
-  <p class="instructions">{{ 'Step2.INSTRUCTIONS' | translate }}</p>
+  <p class="instructions">{{ "Step2.INSTRUCTIONS" | translate }}</p>
 
   <!-- Form -->
   <form [formGroup]="form" (ngSubmit)="nextStep()">
     <div class="form-container">
-      <!-- Identity Section -->
       <div class="form-column">
-        <h3>{{ 'Step2.IDENTITY_SECTION_TITLE' | translate }}</h3>
+        <h3>{{ "Step2.IDENTITY_SECTION_TITLE" | translate }}</h3>
 
         <mat-form-field class="wider-input">
-          <mat-label>{{ 'Step2.LABEL_LAST_NAME' | translate }}</mat-label>
-          <input
-            matInput
-            formControlName="lastName"
-            placeholder="{{ 'Step2.PLACEHOLDER_LAST_NAME' | translate }}"
-            required
-          />
+          <mat-label>{{ "Step2.LABEL_LAST_NAME" | translate }}</mat-label>
+          <input matInput formControlName="lastName" placeholder="{{ 'Step2.PLACEHOLDER_LAST_NAME' | translate }}"
+            required />
           <mat-icon matSuffix *ngIf="form.get('lastName')?.valid" class="valid-icon">check_circle</mat-icon>
           <mat-error *ngIf="form.get('lastName')?.hasError('required')">
-            {{ 'Step2.ERROR_LAST_NAME_REQUIRED' | translate }}
+            {{ "Step2.ERROR_LAST_NAME_REQUIRED" | translate }}
           </mat-error>
         </mat-form-field>
 
         <mat-form-field class="wider-input">
-          <mat-label>{{ 'Step2.LABEL_USAGE_NAME' | translate }}</mat-label>
-          <input
-            matInput
-            formControlName="usageName"
-            placeholder="{{ 'Step2.PLACEHOLDER_USAGE_NAME' | translate }}"
-          />
+          <mat-label>{{ "Step2.LABEL_USAGE_NAME" | translate }}</mat-label>
+          <input matInput formControlName="usageName" placeholder="{{ 'Step2.PLACEHOLDER_USAGE_NAME' | translate }}" />
         </mat-form-field>
 
         <mat-form-field class="wider-input">
-          <mat-label>{{ 'Step2.LABEL_FIRST_NAME' | translate }}</mat-label>
-          <input
-            matInput
-            formControlName="firstName"
-            placeholder="{{ 'Step2.PLACEHOLDER_FIRST_NAME' | translate }}"
-            required
-          />
+          <mat-label>{{ "Step2.LABEL_FIRST_NAME" | translate }}</mat-label>
+          <input matInput formControlName="firstName" placeholder="{{ 'Step2.PLACEHOLDER_FIRST_NAME' | translate }}"
+            required />
           <mat-icon matSuffix *ngIf="form.get('firstName')?.valid" class="valid-icon">check_circle</mat-icon>
           <mat-error *ngIf="form.get('firstName')?.hasError('required')">
-            {{ 'Step2.ERROR_FIRST_NAME_REQUIRED' | translate }}
+            {{ "Step2.ERROR_FIRST_NAME_REQUIRED" | translate }}
           </mat-error>
         </mat-form-field>
 
         <mat-form-field class="wider-input">
-          <mat-label>{{ 'Step2.LABEL_BIRTH_DATE' | translate }}</mat-label>
-          <input
-            matInput
-            [matDatepicker]="picker"
-            formControlName="birthDate"
-            placeholder="{{ 'Step2.PLACEHOLDER_BIRTH_DATE' | translate }}"
-            required
-          />
+          <mat-label>{{ "Step2.LABEL_BIRTH_DATE" | translate }}</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="birthDate"
+            placeholder="{{ 'Step2.PLACEHOLDER_BIRTH_DATE' | translate }}" required />
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
           <mat-icon matSuffix *ngIf="form.get('birthDate')?.valid" class="valid-icon">check_circle</mat-icon>
           <mat-error *ngIf="form.get('birthDate')?.hasError('required')">
-            {{ 'Step2.ERROR_BIRTH_DATE_REQUIRED' | translate }}
+            {{ "Step2.ERROR_BIRTH_DATE_REQUIRED" | translate }}
           </mat-error>
         </mat-form-field>
 
         <mat-form-field class="wider-input">
-          <mat-label>{{ 'Step2.LABEL_BIRTH_CITY' | translate }}</mat-label>
-          <input
-            matInput
-            formControlName="birthCity"
-            placeholder="{{ 'Step2.PLACEHOLDER_BIRTH_CITY' | translate }}"
-          />
+          <mat-label>{{ "Step2.LABEL_BIRTH_CITY" | translate }}</mat-label>
+          <input matInput formControlName="birthCity" placeholder="{{ 'Step2.PLACEHOLDER_BIRTH_CITY' | translate }}" />
         </mat-form-field>
 
         <mat-form-field class="wider-input">
-          <mat-label>{{ 'Step2.LABEL_BIRTH_COUNTRY' | translate }}</mat-label>
+          <mat-label>{{ "Step2.LABEL_BIRTH_COUNTRY" | translate }}</mat-label>
           <mat-select formControlName="birthCountry">
             <mat-option *ngFor="let country of countries" [value]="country.isoCode">
               {{ country.name }}
@@ -114,80 +92,67 @@
 
       <!-- Domicile Section -->
       <div class="form-column">
-        <h3>{{ 'Step2.DOMICILE_SECTION_TITLE' | translate }}</h3>
+        <h3>{{ "Step2.DOMICILE_SECTION_TITLE" | translate }}</h3>
 
         <mat-form-field class="wider-input">
-          <mat-label>{{ 'Step2.LABEL_MAIN_ADDRESS' | translate }}</mat-label>
-          <input
-            matInput
-            formControlName="mainAddress"
-            placeholder="{{ 'Step2.PLACEHOLDER_MAIN_ADDRESS' | translate }}"
-            required
-          />
+          <mat-label>{{ "Step2.LABEL_MAIN_ADDRESS" | translate }}</mat-label>
+          <input matInput formControlName="mainAddress" placeholder="{{ 'Step2.PLACEHOLDER_MAIN_ADDRESS' | translate }}"
+            required />
           <mat-icon matSuffix *ngIf="form.get('mainAddress')?.valid" class="valid-icon">check_circle</mat-icon>
           <mat-error *ngIf="form.get('mainAddress')?.hasError('required')">
-            {{ 'Step2.ERROR_MAIN_ADDRESS_REQUIRED' | translate }}
+            {{ "Step2.ERROR_MAIN_ADDRESS_REQUIRED" | translate }}
           </mat-error>
         </mat-form-field>
 
         <mat-form-field class="wider-input">
-          <mat-label>{{ 'Step2.LABEL_ADDRESS_COMPLEMENT' | translate }}</mat-label>
-          <input
-            matInput
-            formControlName="addressComplement"
-            placeholder="{{ 'Step2.PLACEHOLDER_ADDRESS_COMPLEMENT' | translate }}"
-          />
+          <mat-label>{{
+            "Step2.LABEL_ADDRESS_COMPLEMENT" | translate
+            }}</mat-label>
+          <input matInput formControlName="addressComplement" placeholder="{{
+              'Step2.PLACEHOLDER_ADDRESS_COMPLEMENT' | translate
+            }}" />
         </mat-form-field>
 
         <mat-form-field class="wider-input">
-          <mat-label>{{ 'Step2.LABEL_POSTAL_CODE' | translate }}</mat-label>
-          <input
-            matInput
-            formControlName="postalCode"
-            placeholder="{{ 'Step2.PLACEHOLDER_POSTAL_CODE' | translate }}"
-            required
-          />
+          <mat-label>{{ "Step2.LABEL_POSTAL_CODE" | translate }}</mat-label>
+          <input matInput formControlName="postalCode" placeholder="{{ 'Step2.PLACEHOLDER_POSTAL_CODE' | translate }}"
+            required />
           <mat-icon matSuffix *ngIf="form.get('postalCode')?.valid" class="valid-icon">check_circle</mat-icon>
           <mat-error *ngIf="form.get('postalCode')?.hasError('required')">
-            {{ 'Step2.ERROR_POSTAL_CODE_REQUIRED' | translate }}
+            {{ "Step2.ERROR_POSTAL_CODE_REQUIRED" | translate }}
           </mat-error>
           <mat-error *ngIf="form.get('postalCode')?.hasError('pattern')">
-            {{ 'Step2.ERROR_POSTAL_CODE_PATTERN' | translate }}
+            {{ "Step2.ERROR_POSTAL_CODE_PATTERN" | translate }}
           </mat-error>
         </mat-form-field>
 
         <mat-form-field class="wider-input">
-          <mat-label>{{ 'Step2.LABEL_CITY' | translate }}</mat-label>
-          <input
-            matInput
-            formControlName="city"
-            placeholder="{{ 'Step2.PLACEHOLDER_CITY' | translate }}"
-            required
-          />
+          <mat-label>{{ "Step2.LABEL_CITY" | translate }}</mat-label>
+          <input matInput formControlName="city" placeholder="{{ 'Step2.PLACEHOLDER_CITY' | translate }}" required />
           <mat-icon matSuffix *ngIf="form.get('city')?.valid" class="valid-icon">check_circle</mat-icon>
           <mat-error *ngIf="form.get('city')?.hasError('required')">
-            {{ 'Step2.ERROR_CITY_REQUIRED' | translate }}
+            {{ "Step2.ERROR_CITY_REQUIRED" | translate }}
           </mat-error>
         </mat-form-field>
 
         <mat-form-field class="wider-input">
-          <mat-label>{{ 'Step2.LABEL_COUNTRY' | translate }}</mat-label>
+          <mat-label>{{ "Step2.LABEL_COUNTRY" | translate }}</mat-label>
           <mat-select formControlName="country">
             <mat-option *ngFor="let country of countries" [value]="country.isoCode">
               {{ country.name }}
             </mat-option>
           </mat-select>
           <mat-error *ngIf="form.get('country')?.hasError('required')">
-            {{ 'Step2.ERROR_COUNTRY_REQUIRED' | translate }}
+            {{ "Step2.ERROR_COUNTRY_REQUIRED" | translate }}
           </mat-error>
         </mat-form-field>
       </div>
     </div>
 
-    <!-- Navigation Buttons -->
     <div class="button-container">
-      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
-        {{ 'Step2.BUTTON_CONTINUE' | translate }}
+      <button type="submit" [disabled]="form.invalid"
+       [ngClass]="{'active-button': !form.invalid,'disabled-button': form.invalid}">
+        {{ "Step2.BUTTON_CONTINUE" | translate }}
       </button>
     </div>
   </form>
