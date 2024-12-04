@@ -37,7 +37,6 @@ export class SummaryComponent implements OnInit {
     this.router.navigate(['/form-step4']);
   }
   validate(): void {
-    alert('Data validated');
     this.router.navigate(['/confirmation']);
   }
 }

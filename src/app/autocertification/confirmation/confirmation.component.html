@@ -1,6 +1,13 @@
 <div class="confirmation-container">
-    <h3>Thank You!</h3>
-    <p>{{ confirmationMessage }}</p>
-    <button mat-raised-button color="primary" routerLink="/">Return to Home</button>
+  <div class="confirmation-content">
+    <img src="assets/airplane-icon.webp" alt="Airplane Icon" class="airplane-icon" />
+    <h2>{{ 'Confirmation.DOCUMENT_SENT' | translate }}</h2>
+    <p>{{ 'Confirmation.TEAM_FOLLOWUP' | translate }}</p>
+    
+    <button class="btn-return" (click)="goToHome()">
+      {{ 'Confirmation.BUTTON_RETURN_HOME' | translate }}
+    </button>
   </div>
+</div>
+
   

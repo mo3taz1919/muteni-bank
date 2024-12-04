@@ -1,90 +1,79 @@
+<div class="form-step-container">
 
+  <div class="p-5 bg-light mb-4">
+    <nav class="d-flex">
+      <h6 class="mb-0">
+        <a routerLink="/">{{ "Breadcrumb.PROFILE" | translate }}</a> >
+        <a routerLink="/form-step1">{{"Breadcrumb.DECEASED_INFO" | translate }}</a>>
+        <a routerLink="/form-step2">{{"Breadcrumb.YOUR_INFO" | translate }}</a>>
+        <a routerLink="/form-step3">{{"Breadcrumb.TAX_RESIDENCE" | translate}}</a>>
+        <a routerLink="/form-step4">{{"Breadcrumb.US_PROFILE" | translate}}</a>>
+        <a routerLink="/form-step5">{{ 'Breadcrumb.FISCAL_NUMBER' | translate }}</a>
+        <a class="text-reset">{{ 'Breadcrumb.SUMMARY' | translate }}</a>
 
-  
-  <div class="summary-container">
-    <div class="p-5 bg-light mb-4">
+      </h6>
+    </nav>
+  </div>
 
-      <nav class="d-flex">
-        <h6 class="mb-0">    
-          <a routerLink="/">{{ 'Breadcrumb.PROFILE' | translate }}</a> >
-          <a routerLink="/form-step1">{{ 'Breadcrumb.DECEASED_INFO' | translate }}</a> >
-          <a routerLink="/form-step2">{{ 'Breadcrumb.YOUR_INFO' | translate }}</a> >
-          <a routerLink="/form-step3">{{ 'Breadcrumb.TAX_RESIDENCE' | translate }}</a>
-          <a routerLink="/form-step4">{{ 'Breadcrumb.US_PROFILE' | translate }}</a>
-          <a routerLink="/form-step5">{{ 'Breadcrumb.FISCAL_NUMBER' | translate }}</a>
-
-          <a class="text-reset">{{ 'Breadcrumb.SUMMARY' | translate }}</a>
-    </h6>
-  </nav>
-  </div>      <div class="summary-header">
-
-      <button mat-button color="primary" class="back-button" (click)="previousStep()">
-        <mat-icon>arrow_circle_left</mat-icon> 
-      </button>
-    <h1>FORMULAIRE FATCA / AEOI</h1>
-    <h2>Récapitulatif</h2>
+  <div class="summary-header d-flex align-items-center">
+    <button class="btn back-button" (click)="previousStep()">
+      <i class="bi bi-arrow-left-circle-fill"></i>
+    </button>
+    <div>
+      <h1>{{ "Summary.FORM_TITLE" | translate }}</h1>
+      <p class="titre-form">{{ "Summary.FORM_SUBTITLE" | translate }}</p>
     </div>
+  </div>
+  
     <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
 
-    <p>
-      Avant de valider, veuillez vérifier que l’ensemble des informations saisies correspondent à votre situation.
-    </p>
 
-    <!-- Information du défunt -->
+<br>
+    <p>
+      {{ "Summary.FORM_TITLE" | translate }}    </p>
     <section class="summary-section">
+      
       <h3>Informations du défunt</h3>
       <div class="summary-details">
-        <div><strong>Nom:</strong> {{ deceasedInfo.fullName }}</div>
-        <div><strong>Prénom:</strong> {{ deceasedInfo.firstName }}</div>
-        <div><strong>Date de naissance:</strong> {{ deceasedInfo.birthDate }}</div>
-        <div><strong>Numéro client:</strong> {{ deceasedInfo.clientNumber }}</div>
+        <div><strong>{{ "Step 1.FORM_LABEL_NAME" | translate}} :</strong> {{ deceasedInfo.lastName }}</div>
+        <div><strong>{{ "Step 1.FORM_LABEL_FIRST_NAME" | translate}}:</strong> {{ deceasedInfo.firstName }}</div>
+        <div><strong>{{"Step 1.FORM_LABEL_BIRTH_DATE" | translate  }}:</strong> {{ deceasedInfo.birthDate |date}}</div>
+        <div><strong>{{"Step 1.FORM_PLACEHOLDER_CLIENT_NUMBER" | translate}}:</strong> {{ deceasedInfo.clientNumber }}</div>
       </div>
-      <button mat-raised-button color="primary" (click)="editSection('deceased')">Modifier</button>
+      <button class="button-edit"  (click)="editSection('deceased')">Modifier</button>
     </section>
   
-    <!-- Vos informations -->
+
     <section class="summary-section">
       <h3>Vos informations</h3>
       <div class="summary-details">
-        <div><strong>Nom:</strong> {{ personalInfo.lastName }}</div>
-        <div><strong>Nom d’usage:</strong> {{ personalInfo.usageName }}</div>
-        <div><strong>Prénom:</strong> {{ personalInfo.firstName }}</div>
-        <div><strong>Date de naissance:</strong> {{ personalInfo.birthDate }}</div>
-        <div><strong>Pays de naissance:</strong> {{ personalInfo.birthCountry }}</div>
-        <div><strong>Ville de naissance:</strong> {{ personalInfo.birthCity }}</div>
-        <div><strong>Adresse de résidence principale:</strong> {{ personalInfo.address }}</div>
-        <div><strong>Complément d’adresse:</strong> {{ personalInfo.addressAdditional }}</div>
-        <div><strong>Code postal:</strong> {{ personalInfo.postalCode }}</div>
-        <div><strong>Ville:</strong> {{ personalInfo.city }}</div>
-        <div><strong>Pays:</strong> {{ personalInfo.country }}</div>
+        <div><strong>{{ "Step2.LABEL_LAST_NAME" | translate }}:</strong> {{ personalInfo.lastName }}</div>
+        <div><strong>{{ "Step2.LABEL_USAGE_NAME" | translate }}:</strong> {{ personalInfo.usageName }}</div>
+        <div><strong>{{ "Step2.LABEL_FIRST_NAME" | translate }}:</strong> {{ personalInfo.firstName }}</div>
+        <div><strong>{{ "Step2.LABEL_BIRTH_DATE" | translate }}:</strong> {{ personalInfo.birthDate |date }}</div>
+        <div><strong>{{ "Step2.LABEL_BIRTH_CITY" | translate }}:</strong> {{ personalInfo.birthCountry }}</div>
+        <div><strong>{{ "Step2.LABEL_BIRTH_COUNTRY" | translate }}:</strong> {{ personalInfo.birthCity }}</div>
+        <div><strong>{{ "Step2.LABEL_MAIN_ADDRESS" | translate }}:</strong> {{ personalInfo.address }}</div>
+        <div><strong>{{"Step2.PLACEHOLDER_ADDRESS_COMPLEMENT" | translate}}:</strong> {{ personalInfo.addressComplement }}</div>
+        <div><strong>{{ "Step2.LABEL_POSTAL_CODE" | translate }}:</strong> {{ personalInfo.postalCode }}</div>
+        <div><strong>{{ "Step2.LABEL_CITY" | translate }}:</strong> {{ personalInfo.city }}</div>
+        <div><strong>{{ "Step2.LABEL_COUNTRY" | translate }}:</strong> {{ personalInfo.country }}</div>
       </div>
-      <button mat-raised-button color="primary" (click)="editSection('personal')">Modifier</button>
+      <button class="button-edit"  (click)="editSection('personal')">Modifier</button>
     </section>
-  
-    <!-- Résidence fiscale -->
-<!--     <section class="summary-section">
-      <h3>Vos informations</h3>
-      <div class="summary-details">
-        <p><strong>{{ 'Step3.QUESTION_US_RESIDENT' | translate }}</strong> {{ taxResidenceInfo.usResident }}</p>
-        <p><strong>{{ 'Step3.QUESTION_US_CITIZEN' | translate }}</strong> {{ taxResidenceInfo.usCitizen }}</p>
-
-      </div>
-      <button mat-raised-button color="primary" (click)="editSection('taxResidence')">Modifier</button>
-    </section> -->
-
-    
+     
     <section class="summary-section">
       <h3>Informations fiscales</h3>
       <div class="summary-details">
-        <p><strong>Pays de résidence fiscale :</strong> {{ taxResidenceInfo.country }}</p>
-        <p><strong>NIF :</strong> {{ taxResidenceInfo.nif }}</p>
+        <p><strong>{{ "Step5.LABEL_COUNTRY" | translate }}:</strong> {{ taxResidenceInfo.country }}</p>
+        <p><strong>{{ "Step5.LABEL_NIF" | translate }} :</strong> {{ taxResidenceInfo.nif }}</p>
       </div>
-      <button mat-raised-button color="primary" (click)="editSection('taxIdentification')">Modifier</button>
+      <button class="button-edit"  (click)="editSection('taxIdentification')">Modifier</button>
     </section>
 
     <!-- Validation -->
-    <div class="validate-container">
-      <button mat-raised-button color="accent" (click)="validate()">Valider</button>
+    <div class="button-container">
+      <button  (click)="validate()">Valider</button>
     </div>
   </div>
   

@@ -25,9 +25,14 @@ export class FormStep5Component implements OnInit {
       this.form.patchValue(JSON.parse(storedData));
     }
     console.log('Initial Identification info in form:', this.form.value);
+    this.loadCountries();
+    console.log('country:', this.loadCountries);
+
   }
   loadCountries(): void {
     this.countries = Country.getAllCountries();
+
+    console.log('country:', this.countries);
   }
   previousStep(): void {
     this.router.navigate(['/form-step4']);

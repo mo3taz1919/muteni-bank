@@ -1,5 +1,49 @@
-.confirmation {
-    padding: 20px;
-    text-align: center;
-  }
-  
+.confirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f1eb;
+  font-family: 'Arial', sans-serif;
+}
+
+.confirmation-content {
+  text-align: center;
+  padding: 70px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.airplane-icon {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn-return {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #13aa9a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-return:hover {
+  background-color: #0e8878;
+}

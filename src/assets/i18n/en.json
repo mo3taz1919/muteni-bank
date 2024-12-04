@@ -106,5 +106,13 @@
     "LABEL_NIF": "TIN",
     "PLACEHOLDER_NIF": "Not required",
     "BUTTON_CONTINUE": "Continue"
-  }
+  },
+  
+    "Confirmation": {
+      "DOCUMENT_SENT": "Your document has been successfully sent",
+      "TEAM_FOLLOWUP": "Our team will get back to you as soon as possible.",
+      "BUTTON_RETURN_HOME": "Return to Home"
+    }
+  
+  
 }

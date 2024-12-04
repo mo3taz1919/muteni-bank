@@ -1,5 +1,5 @@
-.summary-container {
-  max-width: 900px;
+.form-step-container {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   background: #f9f9f9;
@@ -35,12 +35,16 @@ p {
   background: #f9f9f9;
 }
 
-.summary-section h3 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #006400; /* Section headers in dark green */
+.summary-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; 
+  background: #f9f9f9; 
+  padding: 10px 20px;
 }
-
+.titre-form {
+  margin: 0 0 0;
+}
 .summary-details {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -52,15 +56,58 @@ p {
   margin-bottom: 8px;
 }
 
-button {
-  margin-top: 10px;
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #13aa9a; 
+  font-size: 24px; 
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.button-edit {
+  text-transform: none;
+  background-color: #13aa9a;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px 30px;
+  border: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  button {
+    text-transform: none;
+    background-color: #13aa9a;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border: none;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
 }
 
-button[mat-raised-button] {
-  text-transform: none; /* Prevent uppercase text */
-  font-size: 0.9rem;
-}
+.summary-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; 
+  background: #f9f9f9; 
+  padding: 10px 20px; 
 
+}
 .validate-container {
   text-align: center;
   margin-top: 20px;
@@ -69,27 +116,4 @@ button[mat-raised-button] {
 .validate-container button {
   width: 150px;
   font-size: 1rem;
-}
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Space between breadcrumb items */
-  font-size: 14px;
-  color: #6c757d; /* Default breadcrumb text color */
-}
-
-.breadcrumb a {
-  text-decoration: none;
-  color: #007bff; /* Primary breadcrumb link color */
-  font-weight: 500; /* Bold for visibility */
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumb a.active {
-  color: #495057; /* Active breadcrumb color */
-  font-weight: bold; /* Bold for current page */
-  pointer-events: none; /* Disable clicking on the active link */
 }

@@ -110,6 +110,23 @@
     "LABEL_NIF": "NIF",
     "PLACEHOLDER_NIF": "Non demandé",
     "BUTTON_CONTINUE": "Continuer"
+  },
+  "Summary": {
+    "FORM_TITLE": "FORMULAIRE FATCA / AEOI",
+    "FORM_SUBTITLE": "Récapitulatif",
+    "INSTRUCTION": "Avant de valider, veuillez vérifier que l’ensemble des informations saisies correspondent à votre situation.",
+    "LABEL_COUNTRY": "Pays de résidence fiscale",
+    "PLACEHOLDER_COUNTRY": "Entrez un pays",
+    "ERROR_COUNTRY_REQUIRED": "Le pays de résidence fiscale est requis.",
+    "LABEL_NIF": "NIF",
+    "PLACEHOLDER_NIF": "Non demandé",
+    "BUTTON_CONTINUE": "Continuer"
+  },
+      "Confirmation": {
+      "DOCUMENT_SENT": "Votre document a bien été envoyé",
+      "TEAM_FOLLOWUP": "Nos équipes reviendront vers vous dans les plus brefs délais.",
+      "BUTTON_RETURN_HOME": "Retour à l'accueil"
+    }
   }
   
-}
+  

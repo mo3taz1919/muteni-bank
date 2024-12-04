@@ -35,7 +35,7 @@
       <mat-form-field class="wider-input">
         <mat-label>{{ "Step5.LABEL_COUNTRY" | translate }}</mat-label>
         <mat-select formControlName="country">
-          <mat-option *ngFor="let country of countries" [value]="country.isoCode">
+          <mat-option *ngFor="let country of countries" [value]="country.name">
             {{ country.name }}
           </mat-option>
         </mat-select>
