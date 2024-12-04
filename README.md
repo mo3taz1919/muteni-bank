@@ -77,13 +77,13 @@ This command will:
 <img width="70%" alt="Tax Situation" src="https://github.com/mo3taz1919/muteni-bank/blob/e46575d7765758792f1fdc41a00af3028dfaa45c/src/assets/images/step3.JPG">
 
 ### Step 4 :  US Person Profile
-<img width="70%" alt=" US Person Profile" src="https://github.com/mo3taz1919/muteni-bank/blob/e46575d7765758792f1fdc41a00af3028dfaa45c/src/assets/images/step4.JPG">
+<img width="70%" alt=" US Person Profile" src="https://github.com/mo3taz1919/muteni-bank/blob/af44c97555ceef80fc0a70b46508846abaa0f377/src/assets/images/step%204.JPG">
 
 ### Step 5 : Tax Identification Number 
 
 <img width="70%" alt="Tax Identification Number" src="https://github.com/mo3taz1919/muteni-bank/blob/e46575d7765758792f1fdc41a00af3028dfaa45c/src/assets/images/step5.JPG">
 
-### Step 6 : Summary
+### Summary :
 
 <img width="70%" alt="Summary" src="https://github.com/mo3taz1919/muteni-bank/blob/e46575d7765758792f1fdc41a00af3028dfaa45c/src/assets/images/summary.JPG">
 
